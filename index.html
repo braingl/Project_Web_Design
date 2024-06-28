@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TI</title>
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22256%22 height=%22256%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2250%22 fill=%22%232da6ff%22></rect><path d=%22M60.80 22.73L60.80 22.73Q61.25 23.45 61.65 24.66Q62.06 25.88 62.06 27.32L62.06 27.32Q62.06 29.75 60.93 31.01Q59.81 32.27 57.83 32.27L57.83 32.27L45.41 32.27L45.41 77.27Q44.69 77.45 43.16 77.72Q41.63 77.99 40.01 77.99L40.01 77.99Q36.59 77.99 35.15 76.73Q33.71 75.47 33.71 72.50L33.71 72.50L33.71 32.27L18.59 32.27Q18.14 31.46 17.73 30.29Q17.33 29.12 17.33 27.68L17.33 27.68Q17.33 25.16 18.45 23.95Q19.58 22.73 21.56 22.73L21.56 22.73L60.80 22.73ZM77.27 77.99L77.27 77.99Q73.85 77.99 72.41 76.73Q70.97 75.47 70.97 72.50L70.97 72.50L70.97 22.73Q71.78 22.55 73.31 22.28Q74.84 22.01 76.37 22.01L76.37 22.01Q79.61 22.01 81.14 23.18Q82.67 24.35 82.67 27.50L82.67 27.50L82.67 77.27Q81.86 77.45 80.38 77.72Q78.89 77.99 77.27 77.99Z%22 fill=%22%23fff%22></path></svg>" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tinos&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Osage&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="slider.css">
+  <link rel="stylesheet" href="responsif.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap" rel="stylesheet">
+  <!-- font -->
+
+  <style>
+    body::-webkit-scrollbar {
+      width: 0.5em;
+    }
+
+    body::-webkit-scrollbar-track {
+      background: #242424;
+      -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
+    }
+
+    body::-webkit-scrollbar-thumb {
+      background-color: #FFB703;
+    }
+
+    .scrolled {
+      background-color: #f8f8f8;
+      width: auto;
+      margin: 5px 20px 0 20px !important;
+      border-radius: 40px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+      transition: all 0.5s ease-in-out;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar" style="z-index: 999;">
+    <div class="logo" style="margin-right: 30px;">
+      <img src="assets/img/logo_filkom.png" style="height: 50px; width: 50px;">
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="profil.html">Tentang kami</a></li>
+    </ul>
+    <div class="burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </nav>
+  <style>
+    .slider-content .show {
+      position: relative;
+    }
+
+    .slider-content .show .image-c::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: linear-gradient(to right, #0d48a1 0%, rgba(0, 0, 255, 0) 100%);
+      z-index: 1;
+      mix-blend-mode: multiply;
+    }
+
+    .image-c {
+      height: 100vh;
+      width: 100% !important;
+    }
+
+    .image-c img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .content {
+      z-index: 4;
+    }
+  </style>
+  <main>
+    <!-- slider -->
+    <section style="color: white;">
+      <div class="inventory-c">
+        <div class="slider">
+          <div class="slider-content">
+            <figure class="show">
+              <div class="image-c">
+                <img src="assets/img/bg-2.jpg" alt="bg">
+              </div>
+              <div class="content">
+                <div class="good-md-6"
+                  style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+                  <div>
+                    <h1 class="title">Informatika</h1>
+                    <p class="sub-title">Unversitas Klabat</p>
+                    <p class="desc">Program Studi Informatika, Universitas Klabat dapat berprofesi menjadi: 1. Intelligent System Developer 2. Game Developer 3. Software Tester 4. Programmer 5. Computer Network Engineer 6. Network Administrator 7. Web Engineer 8. Database Engineer 9. Konsultan IT 10. Konsultan ERP 11. System Analyst 12. Software Engineer</p>
+                  </div>
+                </div>
+                <div class="good-md-6"
+                  style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+                </div>
+              </div>
+            </figure>
+            <figure>
+              <div class="image-c">
+                <img src="assets/img/bg/4.png" alt="bg1">
+              </div>
+              <div class="content">
+                <div class="good-md-6"
+                  style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+                  <div>
+                    <h1 class="title">Sistem Informasi</h1>
+                    <p class="sub-title">Universitas Klabat</p>
+                    <p class="desc"> Tidak hanya untuk mencari dan mendapatkan informasi, tetapi Internet juga dimanfaatkan oleh perusahaan baik skala kecil maupun besar untuk melakukan transaksi bisnis, atau yang kita kenal dengan istilah Electronic Commerce (E-Commerce). Mahasiswa program studi Sistem Informasi dapat menjadi seorang Digital Marketing Manager yang bertanggung jawab terhadap penyusunan dan implementasi strategi pemasaran digital perusahaan. Mahasiswa diajarkan berbagai strategi pemasaran internet, seperti SEO, SEM, Social Media Campaign and Analytics, Advertising, dan skill lainnya yang dibutuhkan untuk bisa menjadi seorang Digital Marketing Manager yang sukses.</p>
+                  </div>
+                </div>
+              </div>
+            </figure>
+            <figure>
+              <div class="image-c">
+                <img src="assets/img/bg/4.png" alt="bg1">
+              </div>
+              <div class="content">
+                <div class="good-md-6"
+                  style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+                  <div>
+                    <h1 class="title">Teknologi Informasi</h1>
+                    <p class="sub-title">Universitas Klabat</p>
+                    <p class="desc"> Program studi Teknologi Informasi dengan konsentrasi Desain, Animasi, dan Multimedia adalah sebuah program pendidikan yang menggabungkan prinsip-prinsip desain visual, animasi, dan pengembangan multimedia dengan pengetahuan dan keahlian di bidang teknologi informasi. Program ini bertujuan untuk melatih mahasiswa dalam menciptakan konten digital yang menarik dan interaktif, serta dipersiapkan untuk berkarir di industri kreatif.
+
+                      Selama studi, mahasiswa akan mempelajari konsep dasar desain visual, estetika, dan teknik-teknik kreatif untuk menciptakan antarmuka pengguna yang menarik dan intuitif. Dan selain itu juga akan diperkenalkan pada prinsip-prinsip animasi, termasuk gerakan, timing, dan karakterisasi, untuk menghasilkan animasi yang hidup dan mengesankan. Mahasiswa tentunya juga akan mempelajari teknologi multimedia seperti pengembangan web, grafika komputer, suara, dan video untuk menciptakan pengalaman multimedia dalam sebuah tampilan visual yang informatif dan kreatif.</p>
+                  </div>
+                </div>
+              </div>
+            </figure>
+          </div>
+          <div class="slider-navigation">
+            <button>
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- about -->
+    <section class="about r-bg" style="background-color: #f8f8f8 !important;">
+      <style>
+        .r-bg {
+          background-image: url(assets/img/bg/iiisometric.svg);
+          background-size: auto;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+
+        @media screen and (max-width: 768px) {
+          .r-bg {
+            background-image: none;
+          }
+        }
+      </style>
+      <div class="inventory"
+        style="min-height: 100vh; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+        <div class="wor aos" delay="100">
+          <h2 style="color: #000000; padding: 50px; color: #FFB703;">Informatika</h2>
+        </div>
+        <div class="wor">
+          <div class="good-md-6 aos" delay="100"
+            style="display: flex; justify-content: flex-start; align-items: center; flex-direction: column;">
+            <img src="assets/img/logo_filkom.png" alt="" style="max-height: 300px; padding: 30px;">
+          </div>
+          <div class="good-md-6 aos" delay="150"
+            style="display: flex; justify-content: center; align-items: center; flex-direction: column; padding: 20px;">
+            <p class="desc" style="color: #000000;">
+              <span style="color: #161616;">Lulusan Informatika Universitas Klabat memiliki tiga Profil Lulusan (PL) yaitu Game Development and Graphic Design Animation (GD2A), Competitive Intelligence Analysis (CIA) dan Web / Mobile Developer (WMD)
+                PL2. Competitive Intelligence Analysis (CIA) Lulusan dapat menjadi soerang Competitive Intelligence Analysis dengan dapat mengumpulkan, mengolah, dan menganalisa data untuk menghasilkan informasi yang berguna dalam pengambilan keputusan suatu organisasi atau badan usaha.
+                PL3. Web / Mobile Developer (WMD) Lulusan dapat menjadi ahli dibidang programming yang peran utamanya membuat aplikasi pada ponsel pintar dan Web. Mampu mendesain dan menerapkan rekayasa mengenai perangkat lunak, menguasai berbagai sistem dan bahasa program sekaligus untuk menghubungkan satu dengan lainnya serta menciptakan jenis aplikasi tertentu.
+                Program Studi Informatika, Universitas Klabat dapat berprofesi menjadi: 1. Intelligent System Developer 2. Game Developer 3. Software Tester 4. Programmer 5. Computer Network Engineer 6. Network Administrator 7. Web Engineer 8. Database Engineer 9. Konsultan IT 10. Konsultan ERP 11. System Analyst 12. Software Engineer</span>
+            
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="about r-bg" style="background-color: #f8f8f8 !important;">
+      <style>
+        .r-bg {
+          background-image: url(assets/img/bg/iiisometric.svg);
+          background-size: auto;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+
+        @media screen and (max-width: 768px) {
+          .r-bg {
+            background-image: none;
+          }
+        }
+      </style>
+      <div class="inventory"
+        style="min-height: 100vh; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+        <div class="wor aos" delay="100">
+          <h2 style="color: #000000; padding: 50px; color: #FFB703;">Sistem Informasi</h2>
+        </div>
+        <div class="wor">
+          <div class="good-md-6 aos" delay="100"
+            style="display: flex; justify-content: flex-start; align-items: center; flex-direction: column;">
+            <img src="assets/img/logo_filkom.png" alt="" style="max-height: 300px; padding: 30px;">
+          </div>
+          <div class="good-md-6 aos" delay="150"
+            style="display: flex; justify-content: center; align-items: center; flex-direction: column; padding: 20px;">
+            <p class="desc" style="color: #000000;">
+              <span style="color: #161616;">Lulusan program studi Sistem Informasi Universitas Klabat memiliki tiga profil lulusan, yaitu Perintis Bisnis Berbasis IT (Technopreneur/Entrepreneur) atau Startup Digital, IT Project Manager, dan Digital Marketing Manager. Berikut penjelasan dari profil lulusan program studi Sistem Informasi, Universitas Klabat:
+                • Perintis Bisnis Berbasis IT (Technopreneur / Entrepreneur)
+                – Startup Digital Dengan revisi kurikulum baru (Kurikulum SI 2020), mahasiswa akan dibekali dengan pengetahuan dan skill yang dibutuhkan untuk membuat perusahaan rintisan berbasis teknologi. Ditunjang dengan fasilitas yang memadai dan ekosistem entrepreneurship (UNKLAB Business and Entrepreneur Center – UBEC, dan Inkubator Bisnis Teknologi – IBT UNIQ), serta koneksi dengan investor (Venture Capital) memberikan kesempatan kepada mahasiswa untuk mengembangkan produk digital yang dibutuhkan masyarakat dan mendirikan perusahaan startup mereka sendiri.
+                • IT Project Manager Mengembangkan sistem informasi yang dapat memenuhi kebutuhan organisasi/perusahaan dan menyeleraskannya dengan visi serta misi perusahaan memerlukan perencanaan dan eksekusi proyek berbasis teknologi yang baik dan efisien. Di program studi Sistem Informasi, mahasiswa dibekali dengan skill dan pengetahuan yang diperlukan untuk mengatur (manage) proyek teknologi informasi, dari skala kecil hingga skala besar. Selain itu, mahasiswa juga diberikan pelatihan berupa sertifikasi di bidang Project Management berstandar internasional dan digunakan sebagai standar seorang Project Manager yang berkompeten di bidangnya. Selama menempuh kuliah, mahasiswa akan terlibat secara langsung dalam proyek IT, baik di perusahaan maupun lembaga pemerintahan.
+                • Digital Marketing Manager Perkembangan dunia digital khususnya penetrasi Internet, menjadikan sarana jaringan komputer ini sebagai tempat untuk mendapatkan informasi. Tidak hanya untuk mencari dan mendapatkan informasi, tetapi Internet juga dimanfaatkan oleh perusahaan baik skala kecil maupun besar untuk melakukan transaksi bisnis, atau yang kita kenal dengan istilah Electronic Commerce (E-Commerce). Mahasiswa program studi Sistem Informasi dapat menjadi seorang Digital Marketing Manager yang bertanggung jawab terhadap penyusunan dan implementasi strategi pemasaran digital perusahaan. Mahasiswa diajarkan berbagai strategi pemasaran internet, seperti SEO, SEM, Social Media Campaign and Analytics, Advertising, dan skill lainnya yang dibutuhkan untuk bisa menjadi seorang Digital Marketing Manager yang sukses.</span>
+            
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="about r-bg" style="background-color: #f8f8f8 !important;">
+      <style>
+        .r-bg {
+          background-image: url(assets/img/bg/iiisometric.svg);
+          background-size: auto;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+
+        @media screen and (max-width: 768px) {
+          .r-bg {
+            background-image: none;
+          }
+        }
+      </style>
+      <div class="inventory"
+        style="min-height: 100vh; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+        <div class="wor aos" delay="100">
+          <h2 style="color: #000000; padding: 50px; color: #FFB703;">Teknologi Informasi</h2>
+        </div>
+        <div class="wor">
+          <div class="good-md-6 aos" delay="100"
+            style="display: flex; justify-content: flex-start; align-items: center; flex-direction: column;">
+            <img src="assets/img/logo_filkom.png" alt="" style="max-height: 300px; padding: 30px;">
+          </div>
+          <div class="good-md-6 aos" delay="150"
+            style="display: flex; justify-content: center; align-items: center; flex-direction: column; padding: 20px;">
+            <p class="desc" style="color: #000000;">
+              <span style="color: #161616;">Program studi Teknologi Informasi dengan konsentrasi Desain, Animasi, dan Multimedia adalah sebuah program pendidikan yang menggabungkan prinsip-prinsip desain visual, animasi, dan pengembangan multimedia dengan pengetahuan dan keahlian di bidang teknologi informasi. Program ini bertujuan untuk melatih mahasiswa dalam menciptakan konten digital yang menarik dan interaktif, serta dipersiapkan untuk berkarir di industri kreatif.
+
+                Selama studi, mahasiswa akan mempelajari konsep dasar desain visual, estetika, dan teknik-teknik kreatif untuk menciptakan antarmuka pengguna yang menarik dan intuitif. Dan selain itu juga akan diperkenalkan pada prinsip-prinsip animasi, termasuk gerakan, timing, dan karakterisasi, untuk menghasilkan animasi yang hidup dan mengesankan. Mahasiswa tentunya juga akan mempelajari teknologi multimedia seperti pengembangan web, grafika komputer, suara, dan video untuk menciptakan pengalaman multimedia dalam sebuah tampilan visual yang informatif dan kreatif.</span>
+            
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 490" xmlns="http://www.w3.org/2000/svg"
+      class="transition duration-300 ease-in-out delay-150">
+      <path
+        d="M 0,500 C 0,500 0,125 0,125 C 42.0908430040445,120.22951968066828 84.181686008089,115.45903936133655 128,128 C 171.818313991911,140.54096063866345 217.3640989716884,170.39336223532212 268,166 C 318.6359010283116,161.60663776467788 374.36191810515743,122.96751169737503 432,113 C 489.63808189484257,103.03248830262497 549.188228607682,121.73659097517778 593,119 C 636.811771392318,116.26340902482222 664.8851674641148,92.08612440191388 702,85 C 739.1148325358852,77.91387559808612 785.2711015358589,87.91891141716671 838,101 C 890.7288984641411,114.08108858283329 950.0304263924502,130.23822992941925 1006,132 C 1061.9695736075498,133.76177007058075 1114.6071928943404,121.12816886515634 1167,129 C 1219.3928071056596,136.87183113484366 1271.5408020301884,165.24909460995534 1317,168 C 1362.4591979698116,170.75090539004466 1401.2295989849058,147.87545269502232 1440,125 C 1440,125 1440,500 1440,500 Z"
+        stroke="none" stroke-width="0" fill="#0d47a1" fill-opacity="0.4"
+        class="transition-all duration-300 ease-in-out delay-150 path-0"></path>
+      <path
+        d="M 0,500 C 0,500 0,250 0,250 C 39.19044912633164,235.8437838695181 78.38089825266329,221.68756773903618 135,211 C 191.6191017473367,200.31243226096382 265.66685611567846,193.09351291337336 312,208 C 358.33314388432154,222.90648708662664 376.951677284623,259.93838060747044 415,277 C 453.048322715377,294.06161939252956 510.5264347458299,291.1529646567448 566,286 C 621.4735652541701,280.8470353432552 674.9425837320575,273.44976076555025 726,273 C 777.0574162679425,272.55023923444975 825.7032303259402,279.0479922810542 874,269 C 922.2967696740598,258.9520077189458 970.2444949641811,232.35827011023295 1017,239 C 1063.755505035819,245.64172988976705 1109.3187898173358,285.5189272780142 1149,291 C 1188.6812101826642,296.4810727219858 1222.4803457664755,267.5660207777102 1270,255 C 1317.5196542335245,242.4339792222898 1378.7598271167622,246.2169896111449 1440,250 C 1440,250 1440,500 1440,500 Z"
+        stroke="none" stroke-width="0" fill="#0d47a1" fill-opacity="0.53"
+        class="transition-all duration-300 ease-in-out delay-150 path-1"></path>
+      <path
+        d="M 0,500 C 0,500 0,375 0,375 C 41.794403764307816,382.2990166274551 83.58880752861563,389.59803325491026 135,386 C 186.41119247138437,382.40196674508974 247.43917364984532,367.9068836078141 292,377 C 336.5608263501547,386.0931163921859 364.65449787200305,418.7744323138333 417,418 C 469.34550212799695,417.2255676861667 545.9428348621427,382.9953871368527 594,370 C 642.0571651378573,357.0046128631473 661.5741626794259,365.24401913875596 701,370 C 740.4258373205741,374.75598086124404 799.7605144201538,376.0285363081234 852,375 C 904.2394855798462,373.9714636918766 949.3837796399589,370.6418356287504 996,368 C 1042.616220360041,365.3581643712496 1090.704367020011,363.4041211768749 1143,355 C 1195.295632979989,346.5958788231251 1251.798752279997,331.74167966375 1302,334 C 1352.201247720003,336.25832033625 1396.1006238600016,355.629160168125 1440,375 C 1440,375 1440,500 1440,500 Z"
+        stroke="none" stroke-width="0" fill="#0d47a1" fill-opacity="1"
+        class="transition-all duration-300 ease-in-out delay-150 path-2"></path>
+    </svg>
+    <section style="background-color: #0d47a1; margin-top: -20px;">
+      <div class="inventory"
+        style="min-height: 50vh; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+        <div class="wor aos">
+          <h2 style="color: #fff; padding: 10px;">Kenapa Harus Fakultas Ilmu Komputer Universitas Klabat?</h2>
+        </div>
+        <div class="wor aos" style="justify-content: center;">
+          <div class="good-md-3" style="padding: 30px;">
+            <!-- card -->
+            <div class="card inner">
+              <div class="overlay"></div>
+              <div class="circle">
+                <i class="fa-solid fa-computer f-icon"></i>
+              </div>
+              <p>Fasilitas yang lengkap</p>
+            </div>
+            <!-- end -->
+          </div>
+          <div class="good-md-3" style="padding: 30px;">
+            <!-- card -->
+            <div class="card inner">
+              <div class="overlay"></div>
+              <div class="circle">
+                <i class="fa-solid fa-school f-icon"></i>
+              </div>
+              <p>Lingkungan yang nyaman</p>
+            </div>
+            <!-- end -->
+          </div>
+          <div class="good-md-3" style="padding: 30px;">
+            <!-- card -->
+            <div class="card inner">
+              <div class="overlay"></div>
+              <div class="circle">
+                <i class="fa-solid fa-chalkboard-user f-icon"></i>
+              </div>
+              <p>Pengajar yang kompeten</p>
+            </div>
+            <!-- end -->
+          </div>
+          <div class="good-md-3" style="padding: 30px;">
+            <!-- card -->
+            <div class="card inner">
+              <div class="overlay"></div>
+              <div class="circle">
+                <i class="fa-solid fa-handshake user f-icon"></i>
+              </div>
+              <p>Kerjasama yang luas</p>
+            </div>
+            <!-- end -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 490" xmlns="http://www.w3.org/2000/svg"
+      class="transition duration-300 ease-in-out delay-150">
+      <path
+        d="M 0,500 C 0,500 0,125 0,125 C 47.383951465806675,121.76800867059663 94.76790293161335,118.53601734119327 144,110 C 193.23209706838665,101.46398265880673 244.31233973935338,87.62393930582357 287,83 C 329.6876602606466,78.37606069417643 363.98273811097306,82.96822543551244 410,101 C 456.01726188902694,119.03177456448756 513.7567078167543,150.50315895212668 575,145 C 636.2432921832457,139.49684104787332 700.9904306220096,97.01913875598086 742,89 C 783.0095693779904,80.98086124401914 800.2815696952072,107.42028602394987 839,114 C 877.7184303047928,120.57971397605013 937.883290597161,107.29971714821963 990,100 C 1042.116709402839,92.70028285178037 1086.1852679161489,91.38084538317163 1131,92 C 1175.8147320838511,92.61915461682837 1221.375637738243,95.17690131909382 1273,101 C 1324.624362261757,106.82309868090618 1382.3121811308783,115.91154934045309 1440,125 C 1440,125 1440,500 1440,500 Z"
+        stroke="none" stroke-width="0" fill="#0d47a1" fill-opacity="0.4"
+        class="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 250)"></path>
+      <path
+        d="M 0,500 C 0,500 0,250 0,250 C 58.1485236194454,260.90693647730575 116.2970472388908,271.81387295461155 158,278 C 199.7029527611092,284.18612704538845 224.96033466388224,285.6514446588596 272,289 C 319.03966533611776,292.3485553411404 387.8616141055804,297.58034840995003 448,294 C 508.1383858944196,290.41965159004997 559.5932089137963,278.0271617013402 597,260 C 634.4067910862037,241.97283829865975 657.7655502392345,218.311004784689 707,206 C 756.2344497607655,193.688995215311 831.344590129266,192.72881915990376 890,216 C 948.655409870734,239.27118084009624 990.856089243702,286.7737185756959 1034,293 C 1077.143910756298,299.2262814243041 1121.2310528959265,264.1763065373126 1171,259 C 1220.7689471040735,253.82369346268737 1276.2196991725925,278.5210552750535 1322,282 C 1367.7803008274075,285.4789447249465 1403.8901504137039,267.73947236247324 1440,250 C 1440,250 1440,500 1440,500 Z"
+        stroke="none" stroke-width="0" fill="#0d47a1" fill-opacity="0.53"
+        class="transition-all duration-300 ease-in-out delay-150 path-1" transform="rotate(-180 720 250)"></path>
+      <path
+        d="M 0,500 C 0,500 0,375 0,375 C 59.600214121441226,358.10191916254723 119.20042824288245,341.2038383250945 168,347 C 216.79957175711755,352.7961616749055 254.79850114991143,381.2865658621692 303,381 C 351.20149885008857,380.7134341378308 409.6055671574718,351.6498982262286 457,347 C 504.3944328425282,342.3501017737714 540.7792302202014,362.11384123291657 579,359 C 617.2207697797986,355.88615876708343 657.2775119617226,329.89473684210526 704,333 C 750.7224880382774,336.10526315789474 804.1107219329086,368.30721139866245 856,390 C 907.8892780670914,411.69278860133755 958.2796003066433,422.87641756324507 1001,410 C 1043.7203996933567,397.12358243675493 1078.7708768405191,360.1871183483571 1134,341 C 1189.2291231594809,321.8128816516429 1264.6368923312805,320.3751090433266 1319,329 C 1373.3631076687195,337.6248909566734 1406.6815538343599,356.3124454783367 1440,375 C 1440,375 1440,500 1440,500 Z"
+        stroke="none" stroke-width="0" fill="#0d47a1" fill-opacity="1"
+        class="transition-all duration-300 ease-in-out delay-150 path-2" transform="rotate(-180 720 250)"></path>
+    </svg>
+    <style>
+      .bg-svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .bg-svg>* {
+        height: 200px;
+        /* place at random */
+        transform: translate(calc(100vw * var(--x)), calc(100vh * var(--y)));
+      }
+
+      .bg-svg>:first-child {
+        --x: 0.5;
+        --y: 0.5;
+      }
+
+      .bg-svg>:nth-child(2) {
+        --x: 0.3;
+        --y: 0.5;
+      }
+
+      .bg-svg>:nth-child(3) {
+        --x: 0.7;
+        --y: 0.3;
+      }
+
+      .bg-svg>:nth-child(4) {
+        --x: 0.2;
+        --y: 0.2;
+      }
+
+      .bg-svg>:nth-child(5) {
+        --x: -0.4;
+        --y: 0.2;
+      }
+
+      .bg-svg>:nth-child(6) {
+        --x: -0.33;
+        --y: 0.4;
+      }
+
+      @media screen and (max-width: 768px) {
+        .bg-svg>* {
+          height: 100px;
+          /* place at random */
+          transform: translate(calc(100vw * var(--x)), calc(100vh * var(--y)));
+        }
+
+      }
+    </style>
+    <!-- bahasa -->
+    <section style="background-color: #f8f8f8; position: relative; overflow: hidden;">
+      <!-- svg bg -->
+      <div class="bg-svg">
+        <svg id="sw-js-blob-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">
+              <stop id="stop1" stop-color="rgba(223, 237, 248, 1)" offset="0%"></stop>
+              <stop id="stop2" stop-color="rgba(223, 237, 248, 1)" offset="100%"></stop>
+            </linearGradient>
+          </defs>
+          <path fill="url(#sw-gradient)"
+            d="M9.9,-11.3C13.5,-3.4,17.5,0.8,17.3,4.9C17.1,9,12.7,13,5.7,19.2C-1.3,25.4,-10.7,33.7,-16.5,31.8C-22.2,30,-24.3,18,-23.2,9.2C-22.1,0.4,-17.8,-5.2,-13.4,-13.4C-9,-21.5,-4.5,-32.2,-0.7,-31.7C3.1,-31.1,6.3,-19.3,9.9,-11.3Z"
+            width="100%" height="100%" transform="translate(50 50)" stroke-width="0"
+            style="transition: all 0.3s ease 0s;" stroke="url(#sw-gradient)"></path>
+        </svg>
+        <svg id="sw-js-blob-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">
+              <stop id="stop1" stop-color="rgba(223, 237, 248, 1)" offset="0%"></stop>
+              <stop id="stop2" stop-color="rgba(223, 237, 248, 1)" offset="100%"></stop>
+            </linearGradient>
+          </defs>
+          <path fill="url(#sw-gradient)"
+            d="M29,-23.8C32.5,-18.7,26.9,-6.9,23.3,4C19.7,14.9,18.3,24.9,13.6,26.4C9,28,1.1,21,-7.3,16.5C-15.8,11.9,-24.8,9.8,-29.3,3C-33.9,-3.9,-33.9,-15.5,-28.3,-21.1C-22.6,-26.7,-11.3,-26.3,0.7,-26.9C12.7,-27.5,25.5,-29,29,-23.8Z"
+            width="100%" height="100%" transform="translate(50 50)" stroke-width="0"
+            style="transition: all 0.3s ease 0s;" stroke="url(#sw-gradient)"></path>
+        </svg>
+        <svg id="sw-js-blob-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">
+              <stop id="stop1" stop-color="rgba(223, 237, 248, 1)" offset="0%"></stop>
+              <stop id="stop2" stop-color="rgba(223, 237, 248, 1)" offset="100%"></stop>
+            </linearGradient>
+          </defs>
+          <path fill="url(#sw-gradient)"
+            d="M22.4,-23.1C28.4,-16.3,32.2,-8.2,31.7,-0.5C31.2,7.1,26.3,14.3,20.3,16.8C14.3,19.4,7.1,17.3,-1,18.3C-9.2,19.4,-18.3,23.4,-24.9,20.9C-31.5,18.3,-35.5,9.2,-34,1.5C-32.5,-6.1,-25.4,-12.3,-18.8,-19C-12.3,-25.7,-6.1,-33,1,-34C8.2,-35,16.3,-29.8,22.4,-23.1Z"
+            width="100%" height="100%" transform="translate(50 50)" stroke-width="0"
+            style="transition: all 0.3s ease 0s;" stroke="url(#sw-gradient)"></path>
+        </svg>
+        <svg id="sw-js-blob-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">
+              <stop id="stop1" stop-color="rgba(223, 237, 248, 1)" offset="0%"></stop>
+              <stop id="stop2" stop-color="rgba(223, 237, 248, 1)" offset="100%"></stop>
+            </linearGradient>
+          </defs>
+          <path fill="url(#sw-gradient)"
+            d="M12.6,-14.1C18.9,-9.8,28.2,-8.2,29,-4.9C29.9,-1.6,22.2,3.4,17.8,9.5C13.3,15.5,12.1,22.6,8.2,25.1C4.4,27.6,-2,25.5,-10.3,24.2C-18.6,23,-28.8,22.8,-34.6,17.6C-40.5,12.4,-42.1,2.4,-39.7,-6.3C-37.3,-14.9,-31,-22.2,-23.7,-26.3C-16.5,-30.4,-8.2,-31.3,-2.5,-28.3C3.2,-25.3,6.4,-18.4,12.6,-14.1Z"
+            width="100%" height="100%" transform="translate(50 50)" stroke-width="0"
+            style="transition: all 0.3s ease 0s;" stroke="url(#sw-gradient)"></path>
+        </svg>
+        <svg id="sw-js-blob-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">
+              <stop id="stop1" stop-color="rgba(223, 237, 248, 1)" offset="0%"></stop>
+              <stop id="stop2" stop-color="rgba(223, 237, 248, 1)" offset="100%"></stop>
+            </linearGradient>
+          </defs>
+          <path fill="url(#sw-gradient)"
+            d="M15.3,-10.1C20.9,1,27.4,10.3,25,17.1C22.6,24,11.3,28.5,1.2,27.7C-8.8,27,-17.6,21.1,-21.2,13.6C-24.7,6.1,-23,-3.1,-18.6,-13.5C-14.2,-23.8,-7.1,-35.3,-1.1,-34.6C4.8,-33.9,9.6,-21.1,15.3,-10.1Z"
+            width="100%" height="100%" transform="translate(50 50)" stroke-width="0"
+            style="transition: all 0.3s ease 0s;" stroke="url(#sw-gradient)"></path>
+        </svg>
+        <svg id="sw-js-blob-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">
+              <stop id="stop1" stop-color="rgba(223, 237, 248, 1)" offset="0%"></stop>
+              <stop id="stop2" stop-color="rgba(223, 237, 248, 1)" offset="100%"></stop>
+            </linearGradient>
+          </defs>
+          <path fill="url(#sw-gradient)"
+            d="M13.5,-20.3C17.7,-15.5,21.4,-11.8,24.1,-7C26.7,-2.2,28.3,3.7,26.9,8.9C25.5,14.1,21.1,18.6,16.1,18.7C11.2,18.9,5.6,14.7,0.3,14.3C-5.1,13.9,-10.1,17.4,-17.5,18.1C-25,18.7,-34.7,16.6,-33.4,12.7C-32.1,8.9,-19.6,3.3,-16.9,-5.6C-14.1,-14.4,-21,-26.5,-19.8,-32.3C-18.7,-38.1,-9.3,-37.7,-2.3,-34.4C4.6,-31.2,9.3,-25.2,13.5,-20.3Z"
+            width="100%" height="100%" transform="translate(50 50)" stroke-width="0"
+            style="transition: all 0.3s ease 0s;" stroke="url(#sw-gradient)"></path>
+        </svg>
+      </div>
+      <!-- main c -->
+      <div class="inventory"
+        style="min-height: 70vh; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+        <div class="wor aos">
+          <h2 style="color: #000000; padding: 10px;">Bahasa Pemrograman yang dipelajari</h2>
+        </div>
+        <a class="aos" href="bahasa.html">
+          <div class="blobs-container">
+            <!-- blob -->
+            <div class="blob">
+              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#0F62FE" id="bpath"
+                  d="M41.2,-46.2C56.7,-36,74.8,-26.2,77.8,-13.2C80.8,-0.1,68.6,16.2,56.5,28.3C44.4,40.4,32.4,48.3,18.5,55.3C4.6,62.3,-11.3,68.4,-23.9,64.4C-36.6,60.4,-46.1,46.2,-50.3,32.3C-54.5,18.3,-53.4,4.5,-53,-11.4C-52.7,-27.3,-52.9,-45.4,-44.2,-56.7C-35.5,-68,-17.7,-72.6,-2.5,-69.7C12.8,-66.7,25.7,-56.3,41.2,-46.2Z"
+                  transform="translate(100 100)" />
+              </svg>
+              <div class="blob-content1">
+                <span class="number">135</span>
+                <span class="language">JavaScript</span>
+              </div>
+            </div>
+            <!-- blob -->
+            <div class="blob">
+              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#0F62FE" id="bpath2"
+                  d="M38.3,-39.2C53.3,-33.1,71.6,-24.5,78.1,-10.4C84.6,3.7,79.3,23.2,69,38.8C58.7,54.3,43.5,66,26.8,71C10,76,-8.2,74.3,-24,67.8C-39.8,61.2,-53.3,49.9,-58.9,36C-64.5,22.1,-62.3,5.8,-57.3,-7.9C-52.2,-21.5,-44.3,-32.4,-34.2,-39.4C-24.2,-46.5,-12.1,-49.7,-0.2,-49.4C11.6,-49.2,23.3,-45.4,38.3,-39.2Z"
+                  transform="translate(100 100)" />
+              </svg>
+              <div class="blob-content2">
+                <span class="number">177</span>
+                <span class="language">PHP</span>
+              </div>
+            </div>
+            <!-- blob -->
+            <div class="blob">
+              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#0F62FE" id="bpath3"
+                  d="M51.9,-69.3C66.3,-61,76.3,-44.5,75.7,-28.7C75.2,-12.9,64.2,2.2,57,16.8C49.9,31.5,46.7,45.7,37.9,51.9C29,58.1,14.5,56.3,-0.4,56.8C-15.3,57.4,-30.6,60.2,-45.1,55.9C-59.6,51.5,-73.4,39.9,-75.6,26.2C-77.8,12.5,-68.5,-3.3,-61.6,-18.6C-54.7,-33.9,-50.4,-48.7,-40.6,-58.5C-30.7,-68.3,-15.4,-73.1,1.7,-75.5C18.8,-77.8,37.5,-77.6,51.9,-69.3Z"
+                  transform="translate(100 100)" />
+              </svg>
+              <div class="blob-content3">
+                <span class="number">922</span>
+                <span class="language">Python</span>
+              </div>
+            </div>
+            <!-- blob -->
+            <div class="blob">
+              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#0F62FE" id="bpath4"
+                  d="M37,-53.1C45.3,-44.8,47.7,-30.5,53,-16.6C58.3,-2.8,66.5,10.8,66.3,24.7C66.1,38.6,57.5,52.9,45,63.4C32.6,73.8,16.3,80.3,2.2,77.3C-12,74.3,-23.9,61.9,-34.3,50.8C-44.7,39.7,-53.5,30,-55.8,19.1C-58,8.2,-53.6,-3.9,-47.5,-13.2C-41.4,-22.5,-33.7,-29.1,-25.5,-37.4C-17.3,-45.7,-8.6,-55.8,2.8,-59.7C14.3,-63.6,28.6,-61.3,37,-53.1Z"
+                  transform="translate(100 100)" />
+              </svg>
+              <div class="blob-content4">
+                <span class="number">331</span>
+                <span class="language">Java</span>
+              </div>
+            </div>
+          </div>
+          <div class="blobs-container">
+            <!-- blob -->
+            <div class="blob">
+              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#0F62FE" id="bpath5"
+                  d="M41.2,-46.2C56.7,-36,74.8,-26.2,77.8,-13.2C80.8,-0.1,68.6,16.2,56.5,28.3C44.4,40.4,32.4,48.3,18.5,55.3C4.6,62.3,-11.3,68.4,-23.9,64.4C-36.6,60.4,-46.1,46.2,-50.3,32.3C-54.5,18.3,-53.4,4.5,-53,-11.4C-52.7,-27.3,-52.9,-45.4,-44.2,-56.7C-35.5,-68,-17.7,-72.6,-2.5,-69.7C12.8,-66.7,25.7,-56.3,41.2,-46.2Z"
+                  transform="translate(100 100)" />
+              </svg>
+              <div class="blob-content5">
+                <span class="number">013</span>
+                <span class="language">C</span>
+              </div>
+            </div>
+            <!-- blob -->
+            <div class="blob">
+              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#0F62FE" id="bpath6"
+                  d="M38.3,-39.2C53.3,-33.1,71.6,-24.5,78.1,-10.4C84.6,3.7,79.3,23.2,69,38.8C58.7,54.3,43.5,66,26.8,71C10,76,-8.2,74.3,-24,67.8C-39.8,61.2,-53.3,49.9,-58.9,36C-64.5,22.1,-62.3,5.8,-57.3,-7.9C-52.2,-21.5,-44.3,-32.4,-34.2,-39.4C-24.2,-46.5,-12.1,-49.7,-0.2,-49.4C11.6,-49.2,23.3,-45.4,38.3,-39.2Z"
+                  transform="translate(100 100)" />
+              </svg>
+              <div class="blob-content6">
+                <span class="number">321</span>
+                <span class="language">C++</span>
+              </div>
+            </div>
+            <!-- blob -->
+            <div class="blob">
+              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#0F62FE" id="bpath7"
+                  d="M51.9,-69.3C66.3,-61,76.3,-44.5,75.7,-28.7C75.2,-12.9,64.2,2.2,57,16.8C49.9,31.5,46.7,45.7,37.9,51.9C29,58.1,14.5,56.3,-0.4,56.8C-15.3,57.4,-30.6,60.2,-45.1,55.9C-59.6,51.5,-73.4,39.9,-75.6,26.2C-77.8,12.5,-68.5,-3.3,-61.6,-18.6C-54.7,-33.9,-50.4,-48.7,-40.6,-58.5C-30.7,-68.3,-15.4,-73.1,1.7,-75.5C18.8,-77.8,37.5,-77.6,51.9,-69.3Z"
+                  transform="translate(100 100)" />
+              </svg>
+              <div class="blob-content7">
+                <span class="number">272</span>
+                <span class="language">Kotlin</span>
+              </div>
+            </div>
+            <!-- blob -->
+            <div class="blob">
+              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#0F62FE" id="bpath8"
+                  d="M37,-53.1C45.3,-44.8,47.7,-30.5,53,-16.6C58.3,-2.8,66.5,10.8,66.3,24.7C66.1,38.6,57.5,52.9,45,63.4C32.6,73.8,16.3,80.3,2.2,77.3C-12,74.3,-23.9,61.9,-34.3,50.8C-44.7,39.7,-53.5,30,-55.8,19.1C-58,8.2,-53.6,-3.9,-47.5,-13.2C-41.4,-22.5,-33.7,-29.1,-25.5,-37.4C-17.3,-45.7,-8.6,-55.8,2.8,-59.7C14.3,-63.6,28.6,-61.3,37,-53.1Z"
+                  transform="translate(100 100)" />
+              </svg>
+              <div class="blob-content8">
+                <span class="number">104</span>
+                <span class="language">C#</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+    <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg"
+      class="transition duration-300 ease-in-out delay-150">
+      <path
+        d="M 0,400 C 0,400 0,100 0,100 C 24.944825676614613,87.33536466133806 49.889651353229226,74.67072932267612 94,68 C 138.11034864677077,61.32927067732388 201.38622026369768,60.65244737063358 238,66 C 274.6137797363023,71.34755262936642 284.56546759198005,82.7194811947896 312,99 C 339.43453240801995,115.2805188052104 384.35190936838217,136.46962785020804 429,137 C 473.64809063161783,137.53037214979196 518.0268949344912,117.4020074043783 562,100 C 605.9731050655088,82.5979925956217 649.5405108936529,67.92234253227883 685,68 C 720.4594891063471,68.07765746772117 747.8110614908967,82.90862246650637 779,87 C 810.1889385091033,91.09137753349363 845.2152431427604,84.44316760169573 879,78 C 912.7847568572396,71.55683239830427 945.3279659380612,65.31870712671069 982,67 C 1018.6720340619388,68.68129287328931 1059.4728931049947,78.28200389146149 1100,93 C 1140.5271068950053,107.71799610853851 1180.78046164196,127.5532773074433 1223,129 C 1265.21953835804,130.4467226925567 1309.4052603271646,113.50488687876526 1346,109 C 1382.5947396728354,104.49511312123474 1411.5984970493814,112.42717517749564 1426,113 C 1440.4015029506186,113.57282482250436 1440.2007514753093,106.78641241125217 1440,100 C 1440,100 1440,400 1440,400 Z"
+        stroke="none" stroke-width="0" fill="#0d47a1" fill-opacity="0.4"
+        class="transition-all duration-300 ease-in-out delay-150 path-0"></path>
+      <path
+        d="M 0,400 C 0,400 0,200 0,200 C 33.52775551734378,184.29346120550278 67.05551103468756,168.58692241100556 105,163 C 142.94448896531244,157.41307758899444 185.30571137859357,161.9457715614806 218,175 C 250.69428862140643,188.0542284385194 273.72164345093796,209.62999134307205 314,204 C 354.27835654906204,198.37000865692795 411.80771481765476,165.53426306623126 449,170 C 486.19228518234524,174.46573693376874 503.0474972784433,216.23295639200282 536,229 C 568.9525027215567,241.76704360799718 618.0022960685718,225.5339113657575 658,223 C 697.9977039314282,220.4660886342425 728.9433184472691,231.63139814496736 768,223 C 807.0566815527309,214.36860185503264 854.2244301423519,185.94049605437306 889,187 C 923.7755698576481,188.05950394562694 946.1589609833225,218.60661763754032 976,219 C 1005.8410390166775,219.39338236245968 1043.1397259243583,189.6330333954657 1088,176 C 1132.8602740756417,162.3669666045343 1185.2821353192444,164.86124878059684 1227,177 C 1268.7178646807556,189.13875121940316 1299.731732798665,210.921971482147 1337,217 C 1374.268267201335,223.078028517853 1417.7909334860958,213.45086529081516 1436,208 C 1454.2090665139042,202.54913470918484 1447.104533256952,201.27456735459242 1440,200 C 1440,200 1440,400 1440,400 Z"
+        stroke="none" stroke-width="0" fill="#0d47a1" fill-opacity="0.53"
+        class="transition-all duration-300 ease-in-out delay-150 path-1"></path>
+      <path
+        d="M 0,400 C 0,400 0,300 0,300 C 48.02112900893914,298.8455253438959 96.04225801787828,297.69105068779174 131,304 C 165.95774198212172,310.30894931220826 187.85209693742604,324.08132259272884 219,319 C 250.14790306257396,313.91867740727116 290.54935423241744,289.983658941293 334,288 C 377.45064576758256,286.016341058707 423.95048613290413,305.98404164209916 455,305 C 486.04951386709587,304.01595835790084 501.6487012359662,282.08017449031024 536,272 C 570.3512987640338,261.91982550968976 623.454708923231,263.6952603966598 662,265 C 700.545291076769,266.3047396033402 724.5324630711096,267.13878392305054 765,275 C 805.4675369288904,282.86121607694946 862.4154387923304,297.7496039111382 900,296 C 937.5845612076696,294.2503960888618 955.8057817595682,275.86280043239674 992,275 C 1028.1942182404318,274.13719956760326 1082.3614341693974,290.79919435927485 1123,305 C 1163.6385658306026,319.20080564072515 1190.748481562842,330.94042213050363 1222,330 C 1253.251518437158,329.05957786949637 1288.6446395792348,315.43911711871056 1329,308 C 1369.3553604207652,300.56088288128944 1414.6729601202187,299.30310939465414 1434,299 C 1453.3270398797813,298.69689060534586 1446.6635199398906,299.3484453026729 1440,300 C 1440,300 1440,400 1440,400 Z"
+        stroke="none" stroke-width="0" fill="#0d47a1" fill-opacity="1"
+        class="transition-all duration-300 ease-in-out delay-150 path-2"></path>
+    </svg>
+    <!-- gallery -->
+    <section style="background-color: #0d47a1; margin-top: -10px;">
+      <div class="inventory aos"
+        style="min-height: 70vh; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+        <div class="wor" style="margin: 30px;">
+          <h2 style="color: #fff; padding: 10px;">Gallery</h2>
+        </div>
+        <div class="wor-c">
+          <div id="gallery">
+            <div><img src="assets/img/gallery/3.JPG" /><a href="#lightbox-1"></a></div>
+            <div><img src="assets/img/gallery/2.jpg" /><a href="#lightbox-2"></a></div>
+            <div><img src="assets/img/gallery/1.JPG" /><a href="#lightbox-3"></a></div>
+            <div><img src="assets/img/gallery/6.JPG" /><a href="#lightbox-4"></a></div>
+            <div><img src="assets/img/gallery/5.JPG" /><a href="#lightbox-5"></a></div>
+            <div><img src="assets/img/gallery/4.JPG" /><a href="#lightbox-6"></a></div>
+            <div><img src="assets/img/gallery/7.JPG" /><a href="#lightbox-5"></a></div>
+            <div><img src="assets/img/gallery/8.JPG" /><a href="#lightbox-6"></a></div>
+            <div><img src="assets/img/gallery/9.JPG" /><a href="#lightbox-5"></a></div>
+            <div><img src="assets/img/gallery/10.JPG" /><a href="#lightbox-6"></a></div>
+            <div><img src="assets/img/gallery/11.JPG" /><a href="#lightbox-6"></a></div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="lightbox" id="lightbox-1">
+        <div class="content"><img src="assets/img/gallery/3.JPG" />
+          <div class="title">Event Forkafest</div><a class="close" href="#gallery"></a>
+        </div>
+      </div>
+      <div class="lightbox" id="lightbox-2">
+        <div class="content"><img src="assets/img/gallery/2.jpg" />
+          <div class="title">Event Forkafest</div><a class="close" href="#gallery"></a>
+        </div>
+      </div>
+      <div class="lightbox" id="lightbox-3">
+        <div class="content"><img src="assets/img/gallery/1.JPG" />
+          <div class="title">Event Forkafest</div><a class="close" href="#gallery"></a>
+        </div>
+      </div>
+      <div class="lightbox" id="lightbox-4">
+        <div class="content"><img src="assets/img/gallery/6.JPG" />
+          <div class="title">Event Forkafest</div><a class="close" href="#gallery"></a>
+        </div>
+      </div>
+      <div class="lightbox" id="lightbox-5">
+        <div class="content"><img src="assets/img/gallery/5.JPG" />
+          <div class="title">Event Forkafest</div><a class="close" href="#gallery"></a>
+        </div>
+      </div>
+      <div class="lightbox" id="lightbox-6">
+        <div class="content"><img src="assets/img/gallery/4.JPG" />
+          <div class="title">Event Forkafest</div><a class="close" href="#gallery"></a>
+        </div>
+      </div>
+    </section>
+    <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg"
+      class="transition duration-300 ease-in-out delay-150">
+      <path
+        d="M 0,400 C 0,400 0,100 0,100 C 47.09720176730487,107.41108247422682 94.19440353460973,114.82216494845362 153,110 C 211.80559646539027,105.17783505154638 282.319587628866,88.12242268041237 351,94 C 419.680412371134,99.87757731958763 486.5272459499264,128.68814432989691 545,126 C 603.4727540500736,123.31185567010309 653.5714285714284,89.125 721,82 C 788.4285714285716,74.875 873.1870397643596,94.81185567010309 926,106 C 978.8129602356404,117.18814432989691 999.6804123711338,119.62757731958764 1055,109 C 1110.3195876288662,98.37242268041236 1200.0913107511046,74.6778350515464 1270,71 C 1339.9086892488954,67.3221649484536 1389.9543446244477,83.6610824742268 1440,100 C 1440,100 1440,400 1440,400 Z"
+        stroke="none" stroke-width="0" fill="#0d47a1" fill-opacity="0.4"
+        class="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 200)"></path>
+      <path
+        d="M 0,400 C 0,400 0,200 0,200 C 68.31756259204712,211.48895434462446 136.63512518409425,222.9779086892489 189,221 C 241.36487481590575,219.0220913107511 277.77706185567007,203.57731958762886 341,191 C 404.22293814432993,178.42268041237114 494.25662739322536,168.71281296023565 557,170 C 619.7433726067746,171.28718703976435 655.1964285714287,183.57142857142858 702,197 C 748.8035714285713,210.42857142857142 806.9576583210602,225.0014727540501 874,226 C 941.0423416789398,226.9985272459499 1016.9729381443301,214.4226804123711 1080,211 C 1143.02706185567,207.5773195876289 1193.15058910162,213.30780559646539 1251,213 C 1308.84941089838,212.69219440353461 1374.42470544919,206.3460972017673 1440,200 C 1440,200 1440,400 1440,400 Z"
+        stroke="none" stroke-width="0" fill="#0d47a1" fill-opacity="0.53"
+        class="transition-all duration-300 ease-in-out delay-150 path-1" transform="rotate(-180 720 200)"></path>
+      <path
+        d="M 0,400 C 0,400 0,300 0,300 C 41.994477172312244,302.8547496318115 83.98895434462449,305.709499263623 149,310 C 214.0110456553755,314.290500736377 302.03865979381436,320.01675257731955 361,326 C 419.96134020618564,331.98324742268045 449.8564064801179,338.22349042709874 509,333 C 568.1435935198821,327.77650957290126 656.5357142857142,311.08928571428567 724,296 C 791.4642857142858,280.91071428571433 838.0007363770252,267.4193667157585 896,266 C 953.9992636229748,264.5806332842415 1023.4613402061855,275.23324742268045 1093,289 C 1162.5386597938145,302.76675257731955 1232.1539027982326,319.64764359351994 1290,322 C 1347.8460972017674,324.35235640648006 1393.9230486008837,312.17617820324006 1440,300 C 1440,300 1440,400 1440,400 Z"
+        stroke="none" stroke-width="0" fill="#0d47a1" fill-opacity="1"
+        class="transition-all duration-300 ease-in-out delay-150 path-2" transform="rotate(-180 720 200)"></path>
+    </svg>
+    <!-- ingfo pendaftaraan -->
+    <style>
+      .card-c {
+        position: relative;
+        top: 2em;
+        width: 14em;
+        height: 6.5em;
+        background: white;
+        transition: .4s ease-in-out;
+        border-radius: 15px;
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+        overflow: hidden;
+      }
+
+      .details {
+        position: relative;
+        color: black;
+        font-size: 0.6em;
+        padding-top: 1.5em;
+        padding-left: 2em;
+        transition: .4s ease-in-out;
+      }
+
+      .heading {
+        position: relative;
+        color: black;
+        font-weight: bold;
+        font-size: 1.1em;
+        padding-top: 1em;
+        padding-left: 1em;
+        transition: .4s ease-in-out;
+      }
+
+      .detail {
+        position: relative;
+        color: black;
+        font-size: 0.8em;
+        padding-top: 1.5em;
+        top: 9.6em;
+        padding: 0 10px;
+        text-align: justify;
+        transition: .4s ease-in-out;
+      }
+
+      .btn1 {
+        position: relative;
+        border: none;
+        outline: none;
+        background-color: black;
+        color: white;
+        font-size: 0.6em;
+        padding-left: 6.9em;
+        padding-right: 6.9em;
+        padding-top: 0.8em;
+        padding-bottom: 0.85em;
+        border-radius: 10px;
+        left: 2.6em;
+        top: 14.8em;
+        transition: .4s ease-in-out;
+        font-weight: bold;
+      }
+
+      .btn1:hover {
+        background-color: rgb(50, 182, 205);
+        cursor: pointer;
+      }
+
+      .btn2 {
+        position: relative;
+        border: none;
+        outline: none;
+        background-color: black;
+        color: white;
+        font-size: 0.6em;
+        padding-left: 5.1em;
+        padding-right: 5.1em;
+        padding-top: 0.8em;
+        padding-bottom: 0.85em;
+        border-radius: 10px;
+        left: 3.6em;
+        top: 13.5em;
+        transition: .4s ease-in-out;
+        font-weight: bold;
+      }
+
+      .btn2:hover {
+        background-color: rgb(50, 161, 205);
+        cursor: pointer;
+      }
+
+      .glasses {
+        position: relative;
+        top: -3.5em;
+        left: 6em;
+        width: 70px;
+        height: 70px;
+        transition: .4s ease-in-out;
+      }
+
+      .card-c:hover {
+        width: 13.5em;
+        /* 200px */
+        height: 22.7em;
+        /* 350px */
+        transform: translateY(1.25em);
+      }
+
+      .card-c:hover+.glasses {
+        transform: rotateX(360deg);
+        height: 100px;
+        width: 100px;
+        left: 0.3em;
+        top: -17.5em;
+      }
+
+      .card-c:hover .heading {
+        transform: translateY(7em) translateX(3.5em);
+      }
+
+      .card-c:hover .details {
+        opacity: 0;
+        transform: translateY(11em) translateX(6em);
+      }
+    </style>
+    
+    <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg"
+      class="transition duration-300 ease-in-out delay-150">
+      <path
+        d="M 0,400 C 0,400 0,100 0,100 C 24.944825676614613,87.33536466133806 49.889651353229226,74.67072932267612 94,68 C 138.11034864677077,61.32927067732388 201.38622026369768,60.65244737063358 238,66 C 274.6137797363023,71.34755262936642 284.56546759198005,82.7194811947896 312,99 C 339.43453240801995,115.2805188052104 384.35190936838217,136.46962785020804 429,137 C 473.64809063161783,137.53037214979196 518.0268949344912,117.4020074043783 562,100 C 605.9731050655088,82.5979925956217 649.5405108936529,67.92234253227883 685,68 C 720.4594891063471,68.07765746772117 747.8110614908967,82.90862246650637 779,87 C 810.1889385091033,91.09137753349363 845.2152431427604,84.44316760169573 879,78 C 912.7847568572396,71.55683239830427 945.3279659380612,65.31870712671069 982,67 C 1018.6720340619388,68.68129287328931 1059.4728931049947,78.28200389146149 1100,93 C 1140.5271068950053,107.71799610853851 1180.78046164196,127.5532773074433 1223,129 C 1265.21953835804,130.4467226925567 1309.4052603271646,113.50488687876526 1346,109 C 1382.5947396728354,104.49511312123474 1411.5984970493814,112.42717517749564 1426,113 C 1440.4015029506186,113.57282482250436 1440.2007514753093,106.78641241125217 1440,100 C 1440,100 1440,400 1440,400 Z"
+        stroke="none" stroke-width="0" fill="#0d47a1" fill-opacity="0.4"
+        class="transition-all duration-300 ease-in-out delay-150 path-0"></path>
+      <path
+        d="M 0,400 C 0,400 0,200 0,200 C 33.52775551734378,184.29346120550278 67.05551103468756,168.58692241100556 105,163 C 142.94448896531244,157.41307758899444 185.30571137859357,161.9457715614806 218,175 C 250.69428862140643,188.0542284385194 273.72164345093796,209.62999134307205 314,204 C 354.27835654906204,198.37000865692795 411.80771481765476,165.53426306623126 449,170 C 486.19228518234524,174.46573693376874 503.0474972784433,216.23295639200282 536,229 C 568.9525027215567,241.76704360799718 618.0022960685718,225.5339113657575 658,223 C 697.9977039314282,220.4660886342425 728.9433184472691,231.63139814496736 768,223 C 807.0566815527309,214.36860185503264 854.2244301423519,185.94049605437306 889,187 C 923.7755698576481,188.05950394562694 946.1589609833225,218.60661763754032 976,219 C 1005.8410390166775,219.39338236245968 1043.1397259243583,189.6330333954657 1088,176 C 1132.8602740756417,162.3669666045343 1185.2821353192444,164.86124878059684 1227,177 C 1268.7178646807556,189.13875121940316 1299.731732798665,210.921971482147 1337,217 C 1374.268267201335,223.078028517853 1417.7909334860958,213.45086529081516 1436,208 C 1454.2090665139042,202.54913470918484 1447.104533256952,201.27456735459242 1440,200 C 1440,200 1440,400 1440,400 Z"
+        stroke="none" stroke-width="0" fill="#0d47a1" fill-opacity="0.53"
+        class="transition-all duration-300 ease-in-out delay-150 path-1"></path>
+      <path
+        d="M 0,400 C 0,400 0,300 0,300 C 48.02112900893914,298.8455253438959 96.04225801787828,297.69105068779174 131,304 C 165.95774198212172,310.30894931220826 187.85209693742604,324.08132259272884 219,319 C 250.14790306257396,313.91867740727116 290.54935423241744,289.983658941293 334,288 C 377.45064576758256,286.016341058707 423.95048613290413,305.98404164209916 455,305 C 486.04951386709587,304.01595835790084 501.6487012359662,282.08017449031024 536,272 C 570.3512987640338,261.91982550968976 623.454708923231,263.6952603966598 662,265 C 700.545291076769,266.3047396033402 724.5324630711096,267.13878392305054 765,275 C 805.4675369288904,282.86121607694946 862.4154387923304,297.7496039111382 900,296 C 937.5845612076696,294.2503960888618 955.8057817595682,275.86280043239674 992,275 C 1028.1942182404318,274.13719956760326 1082.3614341693974,290.79919435927485 1123,305 C 1163.6385658306026,319.20080564072515 1190.748481562842,330.94042213050363 1222,330 C 1253.251518437158,329.05957786949637 1288.6446395792348,315.43911711871056 1329,308 C 1369.3553604207652,300.56088288128944 1414.6729601202187,299.30310939465414 1434,299 C 1453.3270398797813,298.69689060534586 1446.6635199398906,299.3484453026729 1440,300 C 1440,300 1440,400 1440,400 Z"
+        stroke="none" stroke-width="0" fill="#0d47a1" fill-opacity="1"
+        class="transition-all duration-300 ease-in-out delay-150 path-2"></path>
+    </svg>
+  </main>
+ <!-- footer -->
+ <section style="background-color: #0D47A1;">
+<footer style="background-color: #0d47a1; margin-top: -5px; padding: 20px; color: #f8f8f8;">
+  
+  <div class="inventory-fluid">
+    <div class="wor" style="display: flex; justify-content: space-between; align-items: end; flex-direction: row;">
+      <div class="good-md-4">
+        <h3>Universitas Klabat</h3>
+
+        <div class="alamat icon">
+          <i class="fas fa-map-marker-alt"></i>
+          <p>Jl. Arnold Mononutu, Airmadidi, Minahasa Utara, Sulawesi Utara, 95371</p>
+        </div>
+        <!-- email -->
+        <div class="email icon">
+          <i class="fas fa-envelope"></i>
+          <p>info@unklab.ac.id</p>
+        </div>
+        <!-- telp -->
+        <div class="telp icon">
+          <i class="fas fa-phone-alt"></i>
+          <p>+62431 891036</p>
+        </div>
+        <!-- sosmed -->
+        <div class="sosmed">
+          <a href="https://www.instagram.com/unklabofficial/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/UNKLAB-Official-238551992863485" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://twitter.com/unklabofficial" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.youtube.com/c/UnklabMedia" target="_blank"><i
+              class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="good-md-4">
+        <!-- copyright -->
+        <p style="text-align: end;">&copy 3 Angels Team</p>
+      </div>
+    </div>
+  </div>
+</footer>
+</section>
+<!-- footer end -->
+  <script src="assets/js/aos.js"></script>
+  <script src="slider.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.inventory-c {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
+
+.slider {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.slider-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slider-content figure {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.slider-content figure img, .slider-content figure .content {
+    object-fit: cover;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    transform-origin: center;
+    transition-duration: .5s;
+    transition-property: transform, opacity;
+    opacity: 0;
+}
+
+.slider-content figure.show img, .slider-content figure.show .content {
+    background-position: center center;
+    opacity: 1;
+}
+
+.slider-navigation {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0px 30px;
+}
+
+.slider-navigation button {
+    position: absolute;
+    bottom: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #ecedf0;
+    cursor: pointer;
+    background-color: #fff;
+    transform: translateX(-50%);
+    left: 50%;
+    z-index: 5;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+.slider-navigation button.disabled {
+    pointer-events: none;
+}
+
+.slider-content .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+
+.slider-content .content>div {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 767px) {
+    .slider-content .content>div {
+        width: 100%;
+        float: none;
+    }
+}

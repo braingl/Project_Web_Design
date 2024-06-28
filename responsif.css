@@ -1,0 +1,104 @@
+/* Grid Container */
+.inventory {
+    width: 100%;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+.inventory-fluid {
+    width: 100%;
+    box-sizing: border-box;
+}
+/* Grid Columns */
+.good-1 {
+    width: 8.3333333333%;
+    float: left;
+}
+
+.good-4 {
+    width: 33.3333333333%;
+    float: left;
+}
+
+
+.good-6 {
+    width: 50%;
+    float: left;
+}
+
+
+
+.good-12 {
+    width: 100%;
+    float: left;
+}
+
+/* Clearfix */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.image-fluid {
+    max-width: 100%;
+    height: auto;
+
+}
+
+/* breakpoint md */
+
+
+@media (min-width: 768px) {
+
+    .good-md {
+        flex: 1 0 0%;
+    }
+
+
+
+    .good-md-4 {
+        flex: 0 0 auto;
+        width: 33.33333333%;
+    }
+
+
+    .good-md-6 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+
+
+    .good-md-12 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .inventory {
+        flex-direction: column;
+    }
+
+    .good-md-4,
+    .good-md-6,
+    .good-md-12 {
+        width: 100%;
+        float: none;
+    }
+}
+
+
+.wor {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.wor>* {
+    box-sizing: border-box;
+    flex-shrink: 0;
+    max-width: 100%;
+}

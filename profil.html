@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TI</title>
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22256%22 height=%22256%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2250%22 fill=%22%232da6ff%22></rect><path d=%22M60.80 22.73L60.80 22.73Q61.25 23.45 61.65 24.66Q62.06 25.88 62.06 27.32L62.06 27.32Q62.06 29.75 60.93 31.01Q59.81 32.27 57.83 32.27L57.83 32.27L45.41 32.27L45.41 77.27Q44.69 77.45 43.16 77.72Q41.63 77.99 40.01 77.99L40.01 77.99Q36.59 77.99 35.15 76.73Q33.71 75.47 33.71 72.50L33.71 72.50L33.71 32.27L18.59 32.27Q18.14 31.46 17.73 30.29Q17.33 29.12 17.33 27.68L17.33 27.68Q17.33 25.16 18.45 23.95Q19.58 22.73 21.56 22.73L21.56 22.73L60.80 22.73ZM77.27 77.99L77.27 77.99Q73.85 77.99 72.41 76.73Q70.97 75.47 70.97 72.50L70.97 72.50L70.97 22.73Q71.78 22.55 73.31 22.28Q74.84 22.01 76.37 22.01L76.37 22.01Q79.61 22.01 81.14 23.18Q82.67 24.35 82.67 27.50L82.67 27.50L82.67 77.27Q81.86 77.45 80.38 77.72Q78.89 77.99 77.27 77.99Z%22 fill=%22%23fff%22></path></svg>" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="slider.css">
+  <link rel="stylesheet" href="responsif.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap" rel="stylesheet">
+
+  <!-- font -->
+
+  <style>
+    body::-webkit-scrollbar {
+      width: 0.5em;
+    }
+
+    body::-webkit-scrollbar-track {
+      background: #242424;
+      -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
+    }
+
+    body::-webkit-scrollbar-thumb {
+      background-color: #FFB703;
+    }
+
+    .scrolled {
+      background-color: #f8f8f8;
+      width: auto;
+      margin: 5px 20px 0 20px !important;
+      border-radius: 40px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+      transition: all 0.5s ease-in-out;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar" style="z-index: 999;">
+    <div class="logo" style="margin-right: 30px;">
+      <img src="assets/img/logo_filkom.png" style="height: 50px; width: 50px;">
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="profil.html">Tentang kami</a></li>
+    </ul>
+    <div class="burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- head -->
+    <style>
+      .img-c::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(to right, #0d47a1 0%, rgba(0, 0, 255, 0) 100%);
+        z-index: 1;
+        mix-blend-mode: multiply;
+      }
+
+      .img-c {
+        height: 100vh;
+        width: 100% !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+      }
+      .heading {
+        padding-bottom: 0;
+        padding-left: 50px;
+      }
+      @media screen and (max-width: 768px) {
+        .heading {
+          padding-bottom: 35vh;
+          padding-left: 10px;
+        }
+      }
+    </style>
+    <section class="about" data-bss-parallax-bg="true"
+      style="background-color: #f8f8f8 !important; background-image: url(assets/img/bg-1.jpg); width: 100%; height: 100%; background-repeat: no-repeat; background-size: 250px; background-position: left;color: #fff;">
+      <div class="inventory-fluid" style="height: 100vh; ">
+        <div class="img-c">
+          <div style="z-index: 3;" class="heading aos">
+            <h1 class="title">Profil dan dekskripsi</h1>
+            <p class="sub-title">Fakultas Ilmu Komputer</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- deskripsi -->
+    <section style="background-color: #0d47a1;">
+      <div class="inventory"
+        style="min-height: 100vh; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+        <div class="wor aos">
+          <h2 style="color: #f8f8f8; padding: 50px;">Fakultas Ilmu Komputer</h2>
+        </div>
+        <div class="wor aos">
+          <div class="good-md-6"
+            style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+            <img src="assets/img/logo_filkom.png" alt="" style="width: 300px; padding: 30px;">
+          </div>
+          <div class="good-md-6"
+            style="display: flex; justify-content: center; align-items: center; flex-direction: column; padding: 20px;">
+            <p class="desc" style="color: #f8f8f8;">Dalam Fakultas Ilmu Komputer Universitas Klabat, 
+              Anda akan mengalami pendidikan yang tidak hanya berfokus pada ilmu pengetahuan, tetapi juga menerapkan nilai-nilai
+              spiritual guna membentuk karakter yang religius, profesional, dan kompetitif. Kami menyediakan fasilitas belajar
+              yang mendukung dan lingkungan yang kondusif untuk mengembangkan potensi Anda.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 490" xmlns="http://www.w3.org/2000/svg"
+      class="transition duration-300 ease-in-out delay-150">
+      <path
+        d="M 0,500 C 0,500 0,125 0,125 C 47.383951465806675,121.76800867059663 94.76790293161335,118.53601734119327 144,110 C 193.23209706838665,101.46398265880673 244.31233973935338,87.62393930582357 287,83 C 329.6876602606466,78.37606069417643 363.98273811097306,82.96822543551244 410,101 C 456.01726188902694,119.03177456448756 513.7567078167543,150.50315895212668 575,145 C 636.2432921832457,139.49684104787332 700.9904306220096,97.01913875598086 742,89 C 783.0095693779904,80.98086124401914 800.2815696952072,107.42028602394987 839,114 C 877.7184303047928,120.57971397605013 937.883290597161,107.29971714821963 990,100 C 1042.116709402839,92.70028285178037 1086.1852679161489,91.38084538317163 1131,92 C 1175.8147320838511,92.61915461682837 1221.375637738243,95.17690131909382 1273,101 C 1324.624362261757,106.82309868090618 1382.3121811308783,115.91154934045309 1440,125 C 1440,125 1440,500 1440,500 Z"
+        stroke="none" stroke-width="0" fill="#0d47a1" fill-opacity="0.4"
+        class="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 250)"></path>
+      <path
+        d="M 0,500 C 0,500 0,250 0,250 C 58.1485236194454,260.90693647730575 116.2970472388908,271.81387295461155 158,278 C 199.7029527611092,284.18612704538845 224.96033466388224,285.6514446588596 272,289 C 319.03966533611776,292.3485553411404 387.8616141055804,297.58034840995003 448,294 C 508.1383858944196,290.41965159004997 559.5932089137963,278.0271617013402 597,260 C 634.4067910862037,241.97283829865975 657.7655502392345,218.311004784689 707,206 C 756.2344497607655,193.688995215311 831.344590129266,192.72881915990376 890,216 C 948.655409870734,239.27118084009624 990.856089243702,286.7737185756959 1034,293 C 1077.143910756298,299.2262814243041 1121.2310528959265,264.1763065373126 1171,259 C 1220.7689471040735,253.82369346268737 1276.2196991725925,278.5210552750535 1322,282 C 1367.7803008274075,285.4789447249465 1403.8901504137039,267.73947236247324 1440,250 C 1440,250 1440,500 1440,500 Z"
+        stroke="none" stroke-width="0" fill="#0d47a1" fill-opacity="0.53"
+        class="transition-all duration-300 ease-in-out delay-150 path-1" transform="rotate(-180 720 250)"></path>
+      <path
+        d="M 0,500 C 0,500 0,375 0,375 C 59.600214121441226,358.10191916254723 119.20042824288245,341.2038383250945 168,347 C 216.79957175711755,352.7961616749055 254.79850114991143,381.2865658621692 303,381 C 351.20149885008857,380.7134341378308 409.6055671574718,351.6498982262286 457,347 C 504.3944328425282,342.3501017737714 540.7792302202014,362.11384123291657 579,359 C 617.2207697797986,355.88615876708343 657.2775119617226,329.89473684210526 704,333 C 750.7224880382774,336.10526315789474 804.1107219329086,368.30721139866245 856,390 C 907.8892780670914,411.69278860133755 958.2796003066433,422.87641756324507 1001,410 C 1043.7203996933567,397.12358243675493 1078.7708768405191,360.1871183483571 1134,341 C 1189.2291231594809,321.8128816516429 1264.6368923312805,320.3751090433266 1319,329 C 1373.3631076687195,337.6248909566734 1406.6815538343599,356.3124454783367 1440,375 C 1440,375 1440,500 1440,500 Z"
+        stroke="none" stroke-width="0" fill="#0d47a1" fill-opacity="1"
+        class="transition-all duration-300 ease-in-out delay-150 path-2" transform="rotate(-180 720 250)"></path>
+    </svg>
+
+    <!-- sambutan ketua jurusan -->
+    <section style="background-color: #f8f8f8;">
+      <div class="inventory"
+        style="min-height: 70vh; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+        <div class="wor aos">
+          <h2 style="padding: 10px;">Dekan Fakultas Ilmu Komputer</h2>
+        </div>
+        <div class="wor aos">
+          <div class="good-md-6"
+            style="display: flex; justify-content: center; align-items: center; flex-direction: column; padding: 30px 50px;">
+            <img src="assets/img/dekan.jpg" alt="" class=" rounded-circle" style="max-height: 300px; max-width: 300px;">
+            <span style="padding-top: 15px; font-weight: 700; font-family: 'Ubuntu', sans-serif;"><b>Andrew T. Liem, MT, PhD</b></span>
+          </div>
+          <div class="good-md-6"
+            style="display: flex; justify-content: center; align-items: center; flex-direction: column; padding: 20px;">
+            <p class="desc">Fakultas Ilmu Komputer Universitas Klabat (FILKOM UNKLAB) ini keberadaannya sangat diperlukan oleh masyarakat baik pada masa kini maupun pada masa yang akan datang. Pengembangan ilmu komputer ini sangat diperlukan seiring dengan pengembangan kondisi masyarakat dan pemerintah.
+
+              Sumber daya alam Indonesia tersedia untuk diolah secara professional oleh manusia yang professional dalam bidangnya. Manfaatnya dapat dinikmati oleh pengusaha, pemerintah, dan juga masyarakat secara keseluruhan. Itu sebabnya Universitas Klabat merasa perlu untuk terlibat dalam penyediaan tenaga yang terdidik, siap pakai, ahli dan terampil dalam bidangnya dan siap menerima tanggung jawab yang dibebankan kepadanya.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg"
+      class="transition duration-300 ease-in-out delay-150">
+      <path
+        d="M 0,400 C 0,400 0,100 0,100 C 24.944825676614613,87.33536466133806 49.889651353229226,74.67072932267612 94,68 C 138.11034864677077,61.32927067732388 201.38622026369768,60.65244737063358 238,66 C 274.6137797363023,71.34755262936642 284.56546759198005,82.7194811947896 312,99 C 339.43453240801995,115.2805188052104 384.35190936838217,136.46962785020804 429,137 C 473.64809063161783,137.53037214979196 518.0268949344912,117.4020074043783 562,100 C 605.9731050655088,82.5979925956217 649.5405108936529,67.92234253227883 685,68 C 720.4594891063471,68.07765746772117 747.8110614908967,82.90862246650637 779,87 C 810.1889385091033,91.09137753349363 845.2152431427604,84.44316760169573 879,78 C 912.7847568572396,71.55683239830427 945.3279659380612,65.31870712671069 982,67 C 1018.6720340619388,68.68129287328931 1059.4728931049947,78.28200389146149 1100,93 C 1140.5271068950053,107.71799610853851 1180.78046164196,127.5532773074433 1223,129 C 1265.21953835804,130.4467226925567 1309.4052603271646,113.50488687876526 1346,109 C 1382.5947396728354,104.49511312123474 1411.5984970493814,112.42717517749564 1426,113 C 1440.4015029506186,113.57282482250436 1440.2007514753093,106.78641241125217 1440,100 C 1440,100 1440,400 1440,400 Z"
+        stroke="none" stroke-width="0" fill="#0d47a1" fill-opacity="0.4"
+        class="transition-all duration-300 ease-in-out delay-150 path-0"></path>
+      <path
+        d="M 0,400 C 0,400 0,200 0,200 C 33.52775551734378,184.29346120550278 67.05551103468756,168.58692241100556 105,163 C 142.94448896531244,157.41307758899444 185.30571137859357,161.9457715614806 218,175 C 250.69428862140643,188.0542284385194 273.72164345093796,209.62999134307205 314,204 C 354.27835654906204,198.37000865692795 411.80771481765476,165.53426306623126 449,170 C 486.19228518234524,174.46573693376874 503.0474972784433,216.23295639200282 536,229 C 568.9525027215567,241.76704360799718 618.0022960685718,225.5339113657575 658,223 C 697.9977039314282,220.4660886342425 728.9433184472691,231.63139814496736 768,223 C 807.0566815527309,214.36860185503264 854.2244301423519,185.94049605437306 889,187 C 923.7755698576481,188.05950394562694 946.1589609833225,218.60661763754032 976,219 C 1005.8410390166775,219.39338236245968 1043.1397259243583,189.6330333954657 1088,176 C 1132.8602740756417,162.3669666045343 1185.2821353192444,164.86124878059684 1227,177 C 1268.7178646807556,189.13875121940316 1299.731732798665,210.921971482147 1337,217 C 1374.268267201335,223.078028517853 1417.7909334860958,213.45086529081516 1436,208 C 1454.2090665139042,202.54913470918484 1447.104533256952,201.27456735459242 1440,200 C 1440,200 1440,400 1440,400 Z"
+        stroke="none" stroke-width="0" fill="#0d47a1" fill-opacity="0.53"
+        class="transition-all duration-300 ease-in-out delay-150 path-1"></path>
+      <path
+        d="M 0,400 C 0,400 0,300 0,300 C 48.02112900893914,298.8455253438959 96.04225801787828,297.69105068779174 131,304 C 165.95774198212172,310.30894931220826 187.85209693742604,324.08132259272884 219,319 C 250.14790306257396,313.91867740727116 290.54935423241744,289.983658941293 334,288 C 377.45064576758256,286.016341058707 423.95048613290413,305.98404164209916 455,305 C 486.04951386709587,304.01595835790084 501.6487012359662,282.08017449031024 536,272 C 570.3512987640338,261.91982550968976 623.454708923231,263.6952603966598 662,265 C 700.545291076769,266.3047396033402 724.5324630711096,267.13878392305054 765,275 C 805.4675369288904,282.86121607694946 862.4154387923304,297.7496039111382 900,296 C 937.5845612076696,294.2503960888618 955.8057817595682,275.86280043239674 992,275 C 1028.1942182404318,274.13719956760326 1082.3614341693974,290.79919435927485 1123,305 C 1163.6385658306026,319.20080564072515 1190.748481562842,330.94042213050363 1222,330 C 1253.251518437158,329.05957786949637 1288.6446395792348,315.43911711871056 1329,308 C 1369.3553604207652,300.56088288128944 1414.6729601202187,299.30310939465414 1434,299 C 1453.3270398797813,298.69689060534586 1446.6635199398906,299.3484453026729 1440,300 C 1440,300 1440,400 1440,400 Z"
+        stroke="none" stroke-width="0" fill="#0d47a1" fill-opacity="1"
+        class="transition-all duration-300 ease-in-out delay-150 path-2"></path>
+    </svg>
+    <!-- visi misi -->
+    <section style="background-color: #0d47a1; margin-top: -10px; color: #f8f8f8;">
+      <div class="inventory"
+        style="min-height: 50vh; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+        <div class="wor aos">
+          <h2 class="hide-md" style="padding: 10px;">Visi dan Misi</h2>
+        </div>
+        <div class="wor aos">
+          <div class="good-md-6"
+            style="display: flex; justify-content: flex-start; align-items: center; flex-direction: column; padding: 30px">
+            <h3>Misi</h3>
+            <q class="desc" style="font-family: 'Mukta', sans-serif;">Menjadi fakultas ilmu komputer yang unggul dan terkemuka  di Indonesia  Timur dalam penyelenggaraan Pendidikan, Penelitian dan Pengabdian Masyarakat dalam bidang penguasaan teknologi informasi dan sistem informasi yang berlandaskan keimanan yang kuat kepada Tuhan sehingga menciptakan tenaga kerja yang cerdas, kreatif, jujur, disiplin, bertanggungjawab dan takut akan Tuhan.</q>
+          </div>
+          <div class="good-md-6"
+            style="display: flex; justify-content: center; align-items: center; flex-direction: column; padding: 30px 45px;">
+            <h3>Visi</h3>
+            <q class="desc" style="font-family: 'Mukta', sans-serif;">
+              Mengembangkan dan meningkatkan kualitas dosen, mahasiswa maupun lulusannya dalam penelitian dasar dan aplikasinya yang mendukung pengembangan teknologi informasi  dan sistem informasi dalam meningkatkan kesejahteraan umat manusia, dengan cara melaksanakan tri darma perguruan tinggi.
+            </q>
+          </div>
+        </div>
+      </div>
+    </section>
+    <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg"
+      class="transition duration-300 ease-in-out delay-150">
+      <path
+        d="M 0,400 C 0,400 0,100 0,100 C 47.09720176730487,107.41108247422682 94.19440353460973,114.82216494845362 153,110 C 211.80559646539027,105.17783505154638 282.319587628866,88.12242268041237 351,94 C 419.680412371134,99.87757731958763 486.5272459499264,128.68814432989691 545,126 C 603.4727540500736,123.31185567010309 653.5714285714284,89.125 721,82 C 788.4285714285716,74.875 873.1870397643596,94.81185567010309 926,106 C 978.8129602356404,117.18814432989691 999.6804123711338,119.62757731958764 1055,109 C 1110.3195876288662,98.37242268041236 1200.0913107511046,74.6778350515464 1270,71 C 1339.9086892488954,67.3221649484536 1389.9543446244477,83.6610824742268 1440,100 C 1440,100 1440,400 1440,400 Z"
+        stroke="none" stroke-width="0" fill="#0d47a1" fill-opacity="0.4"
+        class="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 200)"></path>
+      <path
+        d="M 0,400 C 0,400 0,200 0,200 C 68.31756259204712,211.48895434462446 136.63512518409425,222.9779086892489 189,221 C 241.36487481590575,219.0220913107511 277.77706185567007,203.57731958762886 341,191 C 404.22293814432993,178.42268041237114 494.25662739322536,168.71281296023565 557,170 C 619.7433726067746,171.28718703976435 655.1964285714287,183.57142857142858 702,197 C 748.8035714285713,210.42857142857142 806.9576583210602,225.0014727540501 874,226 C 941.0423416789398,226.9985272459499 1016.9729381443301,214.4226804123711 1080,211 C 1143.02706185567,207.5773195876289 1193.15058910162,213.30780559646539 1251,213 C 1308.84941089838,212.69219440353461 1374.42470544919,206.3460972017673 1440,200 C 1440,200 1440,400 1440,400 Z"
+        stroke="none" stroke-width="0" fill="#0d47a1" fill-opacity="0.53"
+        class="transition-all duration-300 ease-in-out delay-150 path-1" transform="rotate(-180 720 200)"></path>
+      <path
+        d="M 0,400 C 0,400 0,300 0,300 C 41.994477172312244,302.8547496318115 83.98895434462449,305.709499263623 149,310 C 214.0110456553755,314.290500736377 302.03865979381436,320.01675257731955 361,326 C 419.96134020618564,331.98324742268045 449.8564064801179,338.22349042709874 509,333 C 568.1435935198821,327.77650957290126 656.5357142857142,311.08928571428567 724,296 C 791.4642857142858,280.91071428571433 838.0007363770252,267.4193667157585 896,266 C 953.9992636229748,264.5806332842415 1023.4613402061855,275.23324742268045 1093,289 C 1162.5386597938145,302.76675257731955 1232.1539027982326,319.64764359351994 1290,322 C 1347.8460972017674,324.35235640648006 1393.9230486008837,312.17617820324006 1440,300 C 1440,300 1440,400 1440,400 Z"
+        stroke="none" stroke-width="0" fill="#0d47a1" fill-opacity="1"
+        class="transition-all duration-300 ease-in-out delay-150 path-2" transform="rotate(-180 720 200)"></path>
+    </svg>
+    <!-- akreditasi -->
+    <section class="r-bg" style="background-color: #f8f8f8;">
+      <style>
+        .r-bg {
+          background-image: url(assets/img/bg/iiisometric.svg);
+          background-size: auto;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+
+        @media screen and (max-width: 768px) {
+          .r-bg {
+            background-image: none;
+          }
+        }
+      </style>
+      <div class="inventory"
+        style="min-height: 50vh; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+        <div class="wor aos">
+          <h2 style="padding: 10px;">Akreditasi</h2>
+        </div>
+        <div class="wor aos">
+          <div class="good-md-12"
+            style="display: flex; justify-content: center; align-items: center; flex-direction: column; padding: 30px;text-align:center">
+            <p>Akreditasi Program Studi Teknik Informatika adalah B sesuai dengan no SK Ban PT
+              2429/SK/BAN-PT/Akred/S/IX/2018</p>
+            <p> dokumen SK dan Sertifikat Akreditasi (Berlaku untuk tahun lululsan 2012 ke atas)</p>
+            <div style="text-align: center; margin-top: 20px;">
+              <button class="cta">
+                <span><a href="http://ti.ft.unmuhjember.ac.id/index.php/id/profil/akreditasi.html" style="text-decoration: none; color: #000;">Lihat dokumen</a></span>
+                <svg viewBox="0 0 13 10" height="10px" width="15px">
+                  <path d="M1,5 L11,5"></path>
+                  <polyline points="8 1 12 5 8 9"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg"
+      class="transition duration-300 ease-in-out delay-150">
+      <path
+        d="M 0,400 C 0,400 0,100 0,100 C 24.944825676614613,87.33536466133806 49.889651353229226,74.67072932267612 94,68 C 138.11034864677077,61.32927067732388 201.38622026369768,60.65244737063358 238,66 C 274.6137797363023,71.34755262936642 284.56546759198005,82.7194811947896 312,99 C 339.43453240801995,115.2805188052104 384.35190936838217,136.46962785020804 429,137 C 473.64809063161783,137.53037214979196 518.0268949344912,117.4020074043783 562,100 C 605.9731050655088,82.5979925956217 649.5405108936529,67.92234253227883 685,68 C 720.4594891063471,68.07765746772117 747.8110614908967,82.90862246650637 779,87 C 810.1889385091033,91.09137753349363 845.2152431427604,84.44316760169573 879,78 C 912.7847568572396,71.55683239830427 945.3279659380612,65.31870712671069 982,67 C 1018.6720340619388,68.68129287328931 1059.4728931049947,78.28200389146149 1100,93 C 1140.5271068950053,107.71799610853851 1180.78046164196,127.5532773074433 1223,129 C 1265.21953835804,130.4467226925567 1309.4052603271646,113.50488687876526 1346,109 C 1382.5947396728354,104.49511312123474 1411.5984970493814,112.42717517749564 1426,113 C 1440.4015029506186,113.57282482250436 1440.2007514753093,106.78641241125217 1440,100 C 1440,100 1440,400 1440,400 Z"
+        stroke="none" stroke-width="0" fill="#0d47a1" fill-opacity="0.4"
+        class="transition-all duration-300 ease-in-out delay-150 path-0"></path>
+      <path
+        d="M 0,400 C 0,400 0,200 0,200 C 33.52775551734378,184.29346120550278 67.05551103468756,168.58692241100556 105,163 C 142.94448896531244,157.41307758899444 185.30571137859357,161.9457715614806 218,175 C 250.69428862140643,188.0542284385194 273.72164345093796,209.62999134307205 314,204 C 354.27835654906204,198.37000865692795 411.80771481765476,165.53426306623126 449,170 C 486.19228518234524,174.46573693376874 503.0474972784433,216.23295639200282 536,229 C 568.9525027215567,241.76704360799718 618.0022960685718,225.5339113657575 658,223 C 697.9977039314282,220.4660886342425 728.9433184472691,231.63139814496736 768,223 C 807.0566815527309,214.36860185503264 854.2244301423519,185.94049605437306 889,187 C 923.7755698576481,188.05950394562694 946.1589609833225,218.60661763754032 976,219 C 1005.8410390166775,219.39338236245968 1043.1397259243583,189.6330333954657 1088,176 C 1132.8602740756417,162.3669666045343 1185.2821353192444,164.86124878059684 1227,177 C 1268.7178646807556,189.13875121940316 1299.731732798665,210.921971482147 1337,217 C 1374.268267201335,223.078028517853 1417.7909334860958,213.45086529081516 1436,208 C 1454.2090665139042,202.54913470918484 1447.104533256952,201.27456735459242 1440,200 C 1440,200 1440,400 1440,400 Z"
+        stroke="none" stroke-width="0" fill="#0d47a1" fill-opacity="0.53"
+        class="transition-all duration-300 ease-in-out delay-150 path-1"></path>
+      <path
+        d="M 0,400 C 0,400 0,300 0,300 C 48.02112900893914,298.8455253438959 96.04225801787828,297.69105068779174 131,304 C 165.95774198212172,310.30894931220826 187.85209693742604,324.08132259272884 219,319 C 250.14790306257396,313.91867740727116 290.54935423241744,289.983658941293 334,288 C 377.45064576758256,286.016341058707 423.95048613290413,305.98404164209916 455,305 C 486.04951386709587,304.01595835790084 501.6487012359662,282.08017449031024 536,272 C 570.3512987640338,261.91982550968976 623.454708923231,263.6952603966598 662,265 C 700.545291076769,266.3047396033402 724.5324630711096,267.13878392305054 765,275 C 805.4675369288904,282.86121607694946 862.4154387923304,297.7496039111382 900,296 C 937.5845612076696,294.2503960888618 955.8057817595682,275.86280043239674 992,275 C 1028.1942182404318,274.13719956760326 1082.3614341693974,290.79919435927485 1123,305 C 1163.6385658306026,319.20080564072515 1190.748481562842,330.94042213050363 1222,330 C 1253.251518437158,329.05957786949637 1288.6446395792348,315.43911711871056 1329,308 C 1369.3553604207652,300.56088288128944 1414.6729601202187,299.30310939465414 1434,299 C 1453.3270398797813,298.69689060534586 1446.6635199398906,299.3484453026729 1440,300 C 1440,300 1440,400 1440,400 Z"
+        stroke="none" stroke-width="0" fill="#0d47a1" fill-opacity="1"
+        class="transition-all duration-300 ease-in-out delay-150 path-2"></path>
+    </svg>
+  </main>
+    <!-- footer -->
+  <section style="background-color: #0D47A1;">
+  <footer style="background-color: #0d47a1; margin-top: -5px; padding: 20px; color: #f8f8f8;">
+    
+    <div class="inventory-fluid">
+      <div class="wor" style="display: flex; justify-content: space-between; align-items: end; flex-direction: row;">
+        <div class="good-md-4">
+          <h3>Sekretariat HMD TE</h3>
+
+          <div class="alamat icon">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>Jl. Karimata No. 49 Jember - Jawa Timur - Indonesia</p>
+          </div>
+          <!-- email -->
+          <div class="email icon">
+            <i class="fas fa-envelope"></i>
+            <p>kantorpusat@unmuhjember.ac.id</p>
+          </div>
+          <!-- telp -->
+          <div class="telp icon">
+            <i class="fas fa-phone-alt"></i>
+            <p>(0331) 336728</p>
+          </div>
+          <!-- sosmed -->
+          <div class="sosmed">
+            <a href="https://www.instagram.com/unmuhjember_ofc/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100012524498447" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/unmuhjember_ofc?lang=en" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.youtube.com/channel/UCleKMJMJhS_3HwgSLW0Ywfw" target="_blank"><i
+                class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="good-md-4">
+          <!-- copyright -->
+          <p style="text-align: end;">&copy 3 Angels Team</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</section>
+  <!-- footer end -->
+  <script src="assets/js/parallax.js"></script>
+  <script src="assets/js/aos.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
